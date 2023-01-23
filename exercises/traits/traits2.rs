@@ -17,7 +17,20 @@ trait AppendBar {
     fn append_bar(self) -> Self;
 }
 
-//TODO: Add your code here
+// TODO: Add your code here
+// impl AppendBar for Vec<&str> {    
+//     fn append_bar(mut self) -> Vec<&str>{
+//         self.push("Bar");
+//         self
+//     }
+// }
+
+impl AppendBar for Vec<String> {
+    fn append_bar(mut self) -> Vec<String> {
+        self.push(String::from("Bar")); 
+        self
+    }
+}
 
 #[cfg(test)]
 mod tests {
