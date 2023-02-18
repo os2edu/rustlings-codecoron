@@ -13,6 +13,26 @@ pub fn factorial(num: u64) -> u64 {
     // For an extra challenge, don't use:
     // - recursion
     // Execute `rustlings hint iterators4` for hints.
+
+    // let mut a = vec!();
+    // for i in 1..num+1{
+    //     a.push(i);
+    // }
+
+    // a.iter().fold(1,|acc,x|acc*x)
+
+    //Range implement Iterator
+    (1..num+1).fold(1,|acc,x|acc*x)
+//recurision
+/*
+    if num == 0 {
+        1
+    }
+    else {
+        factorial(num-1)*num
+    }
+ */
+
 }
 
 #[cfg(test)]
