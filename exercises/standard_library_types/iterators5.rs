@@ -35,6 +35,7 @@ fn count_iterator(map: &HashMap<String, Progress>, value: Progress) -> usize {
     // map is a hashmap with String keys and Progress values.
     // map = { "variables1": Complete, "from_str": None, ... }
     // todo!();
+    // TODO v是什么类型
     let mut count = 0;
     for v in map.values() {
         if *v == value {
