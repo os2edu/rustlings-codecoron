@@ -39,6 +39,34 @@ impl Default for Person {
 
 impl From<&str> for Person {
     fn from(s: &str) -> Person {
+        if s.len() == 0 {
+            return Person::default();
+        }
+        let mut split = s.split(",");
+
+        if split.clone().count() != 2 {
+            return Person::default();
+        }
+
+        let name = match split.next() {
+            Some(name) => name,
+            None => return Person::default(),
+        };
+        if name.len() == 0 {
+            return Person::default();
+        }
+        let age = match split.next() {
+            Some(age) => match age.parse::<usize>() {
+                Ok(age) => age,
+                Err(_) => return Person::default(),
+            },
+            None => return Person::default(),
+        };
+
+        Person {
+            name: String::from(name),
+            age,
+        }
     }
 }
 
