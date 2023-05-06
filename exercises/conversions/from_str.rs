@@ -28,7 +28,7 @@ enum ParsePersonError {
     ParseInt(ParseIntError),
 }
 
-// I AM NOT DONE
+// //
 
 // Steps:
 // 1. If the length of the provided string is 0, an error should be returned
@@ -54,7 +54,7 @@ impl FromStr for Person {
         if split.clone().count() != 2 {
             return Err(ParsePersonError::BadLen);
         }
-        
+
         let name = match split.next() {
             Some(name) => name,
             None => return Err(ParsePersonError::NoName),
@@ -65,7 +65,11 @@ impl FromStr for Person {
         let age = match split.next() {
             Some(age) => match age.parse::<usize>() {
                 Ok(age) => age,
-                Err(_) => return Err(ParsePersonError::ParseInt(age.parse::<usize>().unwrap_err())),
+                Err(_) => {
+                    return Err(ParsePersonError::ParseInt(
+                        age.parse::<usize>().unwrap_err(),
+                    ))
+                }
             },
             None => return Err(ParsePersonError::BadLen),
         };

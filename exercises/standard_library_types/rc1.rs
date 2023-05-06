@@ -5,7 +5,7 @@
 
 // Make this code compile by using the proper Rc primitives to express that the sun has multiple owners.
 
-// I AM NOT DONE
+// //
 use std::rc::Rc;
 
 #[derive(Debug)]
@@ -25,7 +25,7 @@ enum Planet {
 
 impl Planet {
     fn details(&self) {
-        println!("Hi from {:?}!", self) 
+        println!("Hi from {:?}!", self)
     }
 }
 

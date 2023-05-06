@@ -1,7 +1,7 @@
 // iterators4.rs
 // Execute `rustlings hint iterators4` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
+// //
 
 pub fn factorial(num: u64) -> u64 {
     // Complete this function to return the factorial of num
@@ -22,17 +22,16 @@ pub fn factorial(num: u64) -> u64 {
     // a.iter().fold(1,|acc,x|acc*x)
 
     //Range implement Iterator
-    (1..num+1).fold(1,|acc,x|acc*x)
-//recurision
-/*
-    if num == 0 {
-        1
-    }
-    else {
-        factorial(num-1)*num
-    }
- */
-
+    (1..num + 1).fold(1, |acc, x| acc * x)
+    //recurision
+    /*
+       if num == 0 {
+           1
+       }
+       else {
+           factorial(num-1)*num
+       }
+    */
 }
 
 #[cfg(test)]
