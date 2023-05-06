@@ -18,7 +18,9 @@ fn main() {
     //A unit value cannot usefully be used anywhere. So binding one is kind of pointless.
     //TODO reset(0,5) return what?
     // return ()
-    let mut my_empty_vec = vec![1, 2, 3, 4, 5].resize(0, 5);
+    // let mut my_empty_vec = vec![1, 2, 3, 4, 5].resize(0, 5);
+    let mut my_empty_vec = vec![1, 2, 3, 4, 5];
+    my_empty_vec.clear();
     println!("This Vec is empty, see? {:?}", my_empty_vec);
 
     let mut value_a = 45;

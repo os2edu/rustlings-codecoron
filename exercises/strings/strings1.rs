@@ -2,13 +2,13 @@
 // Make me compile without changing the function signature!
 // Execute `rustlings hint strings1` or use the `hint` watch subcommand for a hint.
 
-// //
+// //TODO ,I don't know how to do it
 
 fn main() {
     let answer = current_favorite_color();
     println!("My current favorite color is {}", answer);
 }
 
-fn current_favorite_color() -> &str {
+fn current_favorite_color() -> &'static str {
     "blue"
 }
